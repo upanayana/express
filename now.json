@@ -1,0 +1,1 @@
+{"version":2,"name":"gs-express","builds":[{"src":"**/*.js","use":"@now/node"}]}
