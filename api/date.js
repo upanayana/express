@@ -11,7 +11,7 @@ module.exports = (req, res) => {
       const collection = client.db("gearup-sportz").collection("users");
       
       collection.findOne({name: 'GearupSportz'}, function (e, i){
-        res.end(i);
+        res.end(JSON.stringify(i));
       });
 
     } else {
