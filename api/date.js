@@ -11,7 +11,7 @@ module.exports = (req, res) => {
       const collection = client.db("gearup-sportz").collection("users");
       
       collection.findOne({name: 'GearupSportz'}, function (e, i){
-        res.end(req.connection.remoteAddress);
+        res.end(i);
       });
 
     } else {
