@@ -11,11 +11,11 @@ module.exports = (req, res) => {
       const collection = client.db("gearup-sportz").collection("users");
       
       collection.findOne({name: 'GearupSportz'}, function (e, i){
-        res.end(JSON.stringify(i));
+        res.end(req.connection.remoteAddress);
       });
 
     } else {
-      res.end( 'Err Connecting :(');
+      res.end( 'Err Connecting :(' + req.connection.remoteAddress);
     }
     
   });
